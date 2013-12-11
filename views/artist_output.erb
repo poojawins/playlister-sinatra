@@ -1,16 +1,9 @@
-
-
-
-
+<h1>Artists</h1>
 <ul>
   <% @artists.each do |artist| %>
 	<li>
-	  <a href="/artist<%=@artist%>"><%=artist.name %></a>
+	  <a href="/artist/<%=artist.name.gsub(" ", "%20")%>"><%=artist.name %></a>
 	</li>
   <% end %>
 </ul>
-
-
-
-
 

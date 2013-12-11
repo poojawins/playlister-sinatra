@@ -5,6 +5,11 @@ require './lib/parser.rb'
 
 class Playlister < Sinatra::Application
 
+  # before do 
+  #   my_parser = Parser.new
+  #   my_parser.parse_directory
+  # end
+
   get '/artist' do
     my_parser = Parser.new
     my_parser.parse_directory
@@ -19,20 +24,26 @@ class Playlister < Sinatra::Application
     erb :artist_info
   end
 
-  # get '/genre' do
-  #   my_genre = Parser.new
-  #   @genres = my_genre.parse_genre
-  #   erb :genre_output
-  # end
+  get '/genre' do
+    genre_parser = Parser.new
+    genre_parser.parse_directory
+    @genres = Genre.list
+    erb :genre_output
+  end
 
-  # get '/song' do
-  #   my_song = Parser.new
-  #   @songs = my_song.parse_song
-  #   erb :song_output
-  # end
+  get '/genre/:genre' do
+    my_parser = Parser.new
+    my_parser.parse_directory
+    @genre = Genre.find_by_name(params[:genre])
+    erb :genre_info
+  end
 
+  get '/song' do
+    song_parser = Parser.new
+    song_parser.parse_directory
+    @songs = Song.list
+    erb :song_output
+  end
 
 end
-
-
 
