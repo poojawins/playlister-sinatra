@@ -45,5 +45,13 @@ class Playlister < Sinatra::Application
     erb :song_output
   end
 
+  get '/song/:song' do
+    song_parser = Parser.new
+    song_parser.parse_directory
+    @songs = Song.list(params[:song])
+    erb :song_info
+  end
+
+
 end
 
