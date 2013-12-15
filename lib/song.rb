@@ -1,6 +1,10 @@
 class Song
   attr_accessor :artist, :genre, :name
 
+  def self.find_by_name(name)
+    all.detect{|a| a.name == name}
+  end
+
   def self.list
     all.each_with_index do |o, index|
       puts "#{index+1}. #{o.name}"

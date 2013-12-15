@@ -42,24 +42,19 @@ class Playlister < Sinatra::Application
     erb :genre_info
   end
 
-  # get '/songpage/:song' do
-  #   erb :
-  # end
+  get '/songs' do
+    song_parser = Parser.new
+    song_parser.parse_directory
+    @songs = Song.list
+    erb :song_output
+  end
 
-  # get '/song' do
-  #   song_parser = Parser.new
-  #   song_parser.parse_directory
-  #   @songs = Song.list
-  #   erb :song_output
-  # end
-
-  # get '/song/:song' do
-  #   song_parser = Parser.new
-  #   song_parser.parse_directory
-  #   @songs = Song.list(params[:song])
-  #   erb :song_info
-  # end
-
+  get '/songs/:song' do
+    my_parser = Parser.new
+    my_parser.parse_directory
+    @song = Song.find_by_name(params[:song])
+    erb :song_page
+  end
 
 end
 

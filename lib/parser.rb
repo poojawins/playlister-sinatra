@@ -15,7 +15,7 @@ class Parser
 
       song = Song.new
       song.name = song_name
-
+      
       genre = Genre.find_by_name(genre_name) || Genre.new.tap{|g| g.name = genre_name}
 
       song.genre = genre

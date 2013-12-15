@@ -4,7 +4,7 @@
 <ul>
   <% @genre.songs.each do |song| %>
 	<li>
-	  <a href='/genre'><%=song.name %></a>
+	  <a href='/songs/<%=song.name.gsub(" ", "%20")%>'><%=song.name %></a>
 	</li>
   <% end %>
 </ul>
