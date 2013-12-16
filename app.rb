@@ -5,9 +5,10 @@ require './lib/parser.rb'
 
 class Playlister < Sinatra::Application
 
+  my_parser = Parser.new
+  my_parser.parse_directory
+
   get '/' do
-    my_parser = Parser.new
-    my_parser.parse_directory
     erb :index
   end
 
