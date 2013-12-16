@@ -28,7 +28,7 @@ class Playlister < Sinatra::Application
   end
 
   get '/genre/:genre' do
-    @genre = Genre.find_by_name(params[:genre])
+    @genre = genre(params[:genre])
     erb :genre_info
   end
 
