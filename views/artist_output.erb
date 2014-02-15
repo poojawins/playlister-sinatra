@@ -2,7 +2,7 @@
 <ul>
   <% @artists.each do |artist| %>
 	<li>
-	  <a href="/artist/<%=artist.name.gsub(" ", "%20")%>"><%=artist.name %></a>
+	  <a href="/artists/<%= artist.name.gsub(" ", "%20") %>"><%= artist.name %></a>
 	</li>
   <% end %>
 </ul>

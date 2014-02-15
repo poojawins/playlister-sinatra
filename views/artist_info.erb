@@ -1,10 +1,10 @@
-<h1><%=@artist.name %></h1>
+<h1><%= @artist.name %></h1>
 
 <h3>Songs</h3>
 <ul>
   <% @artist.songs.each do |song| %>
 	<li>
-	  <a href='/songs/<%=song.name.gsub(" ", "%20")%>'><%=song.name %></a>
+	  <a href='/songs/<%= song.name.gsub(" ", "%20") %>'><%= song.name %></a>
 	</li>
   <% end %>
 </ul>
@@ -13,7 +13,7 @@
 <ul>
   <% @artist.songs.each do |song| %>
 	<li>
-	  <a href='/genre/<%= song.genre.name%>'><%=song.genre.name %></a>
+	  <a href='/genres/<%= song.genre.name %>'><%= song.genre.name %></a>
 	</li>
   <% end %>
 </ul>

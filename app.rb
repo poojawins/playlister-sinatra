@@ -12,22 +12,22 @@ class Playlister < Sinatra::Application
     erb :index
   end
 
-  get '/artist' do
+  get '/artists' do
     @artists = Artist.list
     erb :artist_output
   end
   
-  get '/artist/:artist' do
+  get '/artists/:artist' do
     @artist = Artist.find_by_name(params[:artist])
     erb :artist_info
   end
 
-  get '/genre' do
+  get '/genres' do
     @genres = Genre.list
     erb :genre_output
   end
 
-  get '/genre/:genre' do
+  get '/genres/:genre' do
     @genre = Genre.find_by_name(params[:genre])
     erb :genre_info
   end
