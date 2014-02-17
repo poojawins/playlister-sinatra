@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   background-color: #CDCDCD;
 }
 
@@ -12,30 +12,11 @@ a:hover {
   color: #FF3300;
 }
 
-.main {
-  text-align: center;
-}
-
-#ytThumbs {
-  display: block;
-}
-
-.page-header {
-  text-align: center;
-  font: 80px white Helvetica;
-}
-
-.header-container .page-header {
-  background-color: black;
-  text-align: center;
-  font-size: 80px;
-  color: white ;
-  font-family: Helvetica, sans-serif;
-}
-
 ul {
-  font: 20px white bold Helvetica;
+  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
   list-style-type: square;
+  text-align: center;
 }
 
 h1 {
@@ -45,13 +26,29 @@ h1 {
 }
 
 h2 {
-  text-align: left;
+  text-align: center;
   font-size: 50px;
-  font-family: Helvetica, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 h3 {
   text-align: left;
   font-size: 22px;
-  font-family: Helvetica, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.main {
+  text-align: center;
+}
+
+#ytThumbs {
+  display: block;
+}
+
+.header-container, .page-header {
+  background-color: black;
+  text-align: center;
+  font-size: 80px;
+  color: white ;
+  font-family: "Lucida Console", Monaco, monospace;
 }
