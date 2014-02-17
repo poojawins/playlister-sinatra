@@ -42,5 +42,11 @@ class Playlister < Sinatra::Application
     erb :song_page
   end
 
+  helpers do
+    def partial(file_name)
+      erb file_name, :layout => false
+    end
+  end
+
 end
 

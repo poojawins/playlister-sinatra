@@ -1,8 +1,25 @@
-
 body {
-  background-color: #CCFFFF;
+  background-color: white;
 }
+
 
 #ytThumbs {
   display: block;
+}
+
+.page-header {
+  text-align: center;
+  font: 80px white Helvetica;
+}
+
+.header-container .page-header {
+  background-color: black;
+  text-align: center;
+  font: 80px white Helvetica;
+}
+
+
+ul {
+  font: 18px white bold Helvetica;
+  list-style-type: square;
 }

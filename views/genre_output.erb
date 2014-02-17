@@ -1,8 +1,8 @@
-<h1>Genres</h1>
+<h2>Genres</h2>
 <ul>
-  <% @genres.each do |genre| %>
+  <% @genres.sort_by { |genre| genre.name }.each do |genre| %>
 	<li>
-	  <a href="/genres/<%= genre.name %>"><%= genre.name %></a>
+	  <a href="/genres/<%= genre.name %>"><%= genre.name.capitalize %></a>
 	</li>
   <% end %>
 </ul>

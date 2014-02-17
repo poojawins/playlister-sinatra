@@ -5,11 +5,16 @@
 
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/styles.css" type="text/css" />
-
 </head>
 <body>
+  <%= partial :_header %>
+  
+  <a href="/artists"><button class="main_filter">Artists</button></a>
+  <a href="/genres"><button class="main_filter">Genres</button></a>
+  <a href="/songs"><button class="main_filter">All Songs</button></a>
+
 	<div class="container">
-    
+
 		<%= yield %>
 	</div>
 </body>

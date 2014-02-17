@@ -1,6 +1,6 @@
-<h1>Artists</h1>
+<h2>Artists</h2>
 <ul>
-  <% @artists.each do |artist| %>
+  <% @artists.sort_by { |artist| artist.name }.each do |artist| %>
 	<li>
 	  <a href="/artists/<%= artist.name.gsub(" ", "%20") %>"><%= artist.name %></a>
 	</li>
