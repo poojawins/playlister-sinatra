@@ -1,5 +1,15 @@
 body {
-  background-color: white;
+  font-family: Helvetica, sans-serif;
+  background-color: #CDCDCD;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FF3300;
 }
 
 .main {
@@ -18,19 +28,30 @@ body {
 .header-container .page-header {
   background-color: black;
   text-align: center;
-  font: 80px white Helvetica;
+  font-size: 80px;
+  color: white ;
+  font-family: Helvetica, sans-serif;
 }
 
 ul {
-  font: 18px white bold Helvetica;
+  font: 20px white bold Helvetica;
   list-style-type: square;
 }
 
 h1 {
   text-align: center;
-  font: 80px Helvetica;
+  font-size: 80px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 h2 {
   text-align: left;
+  font-size: 50px;
+  font-family: Helvetica, sans-serif;
+}
+
+h3 {
+  text-align: left;
+  font-size: 22px;
+  font-family: Helvetica, sans-serif;
 }
