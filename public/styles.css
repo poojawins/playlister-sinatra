@@ -2,6 +2,9 @@ body {
   background-color: white;
 }
 
+.main {
+  text-align: center;
+}
 
 #ytThumbs {
   display: block;
@@ -18,8 +21,16 @@ body {
   font: 80px white Helvetica;
 }
 
-
 ul {
   font: 18px white bold Helvetica;
   list-style-type: square;
+}
+
+h1 {
+  text-align: center;
+  font: 80px Helvetica;
+}
+
+h2 {
+  text-align: left;
 }
