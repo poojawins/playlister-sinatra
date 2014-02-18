@@ -1,6 +1,7 @@
 body {
   font-family: "Lucida Console", Monaco, monospace;
   background-color: #CDCDCD;
+  text-align: center;
 }
 
 a {
@@ -15,18 +16,15 @@ a:hover {
 ul {
   font-size: 20px;
   font-family: "Lucida Console", Monaco, monospace;
-  list-style-type: square;
-  text-align: center;
+  list-style-type: none;
 }
 
 h1 {
-  text-align: center;
   font-size: 80px;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
 h2 {
-  text-align: center;
   font-size: 50px;
   font-family: "Lucida Console", Monaco, monospace;
 }
@@ -41,13 +39,8 @@ h3 {
   text-align: center;
 }
 
-#ytThumbs {
-  display: block;
-}
-
 .header-container, .page-header {
   background-color: black;
-  text-align: center;
   font-size: 80px;
   color: white ;
   font-family: "Lucida Console", Monaco, monospace;
