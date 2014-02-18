@@ -3,4 +3,4 @@ playlister-sinatra
 
 Playlister project using Sinatra. 
 
-User can filter through songs by Artist or Genre. Once the user has selected a song, an embedded youtube player can play the song. 
+A web app where users can filter a playlist of songs by artist and genre. Includes an embedded YouTube player. Used Ruby, Sinatra and Bootstrap. 
