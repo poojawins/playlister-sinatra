@@ -1,3 +1,3 @@
 require './app'
 
-run Playlister
+run SoundHub

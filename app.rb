@@ -3,7 +3,7 @@ Bundler.require
 require './lib/parser.rb'
 
 
-class Playlister < Sinatra::Application
+class SoundHub < Sinatra::Application
 
   my_parser = Parser.new
   my_parser.parse_directory
