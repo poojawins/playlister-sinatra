@@ -1,10 +1,10 @@
 <h2>Genres</h2>
 <br />
-<ul>
+<div class="list">
   <% @genres.sort_by { |genre| genre.name }.each do |genre| %>
-	<li>
+	<p>
 	  <a href="/genres/<%= genre.name %>"><%= genre.name.capitalize %></a>
-	</li>
+	</p>
   <% end %>
-</ul>
+</div>
 

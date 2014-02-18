@@ -1,10 +1,10 @@
 <h2>Songs</h2>
 <br />
-<ul>
+<div class="list">
   <% @songs.sort_by { |song| song.name}.each do |song| %>
-	<li>
+	<p>
 	  <a href="/songs/<%= song.name.gsub(" ", "%20") %>"><%= song.name %></a>
-	</li>
+	</p>
   <% end %>
-</ul>
+</div>
 

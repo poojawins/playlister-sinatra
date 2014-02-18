@@ -1,10 +1,10 @@
 <h2><%= @genre.name.capitalize %></h2>
 <br />
-<ul>
+<div class="list">
   <% @genre.songs.each do |song| %>
-	<li>
+	<p>
 	  <a href='/artists/<%= song.artist.name.gsub(" ", "%20") %>'><%= song.artist.name %></a> - <a href='/songs/<%= song.name.gsub(" ", "%20") %>'><%= song.name %></a>
-	</li>
+	</p>
   <% end %>
-</ul>
+</div>
 
