@@ -42,6 +42,22 @@ class SoundHub < Sinatra::Application
     erb :song_page
   end
 
+  post '/search' do
+    @search = params["search"]
+    search(@search)
+    erb :search_results
+  end
+
+  def search(word)
+    @results = []
+    word.downcase!
+    Song.all.each do |song|
+      @results << song if song.name.downcase.include?(word)
+      @results << song if song.artist.name.downcase.include?(word)
+      @results << song if song.genre.name.downcase.include?(word)
+    end
+  end
+
   helpers do
     def partial(file_name)
       erb file_name, :layout => false

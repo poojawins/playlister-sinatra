@@ -1,0 +1,13 @@
+<h2>Search Results</h2>
+<br />
+<div class="list">
+  <% if @results.length > 0 %>
+    <% @results.sort_by { |song| song.name }.each do |song| %>
+    <p>
+      <a href="/songs/<%= song.name.gsub(" ", "%20") %>"><%= song.name %></a>
+    </p>
+    <% end %>
+  <% else %>
+    No results found.
+  <% end %>
+</div>
