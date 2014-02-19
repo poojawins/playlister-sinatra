@@ -45,7 +45,11 @@ class SoundHub < Sinatra::Application
   post '/search' do
     @search = params["search"]
     search(@search)
-    erb :search_results
+    if @search.empty?
+      erb :no_results
+    else
+      erb :search_results
+    end
   end
 
   def search(word)
