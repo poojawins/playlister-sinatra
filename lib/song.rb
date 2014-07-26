@@ -1,4 +1,5 @@
 class Song
+  
   attr_accessor :artist, :genre, :name
 
   def self.find_by_name(name)
@@ -55,4 +56,3 @@ class Song
   reset_all
 
 end
-

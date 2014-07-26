@@ -1,4 +1,5 @@
 class Genre
+  
   attr_accessor :name, :songs
   
   def self.find_by_name(name)
@@ -54,7 +55,7 @@ class Genre
   def self.all
     @all
   end
+  
   reset_genres
 
 end
-

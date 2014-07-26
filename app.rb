@@ -2,7 +2,6 @@ require 'bundler'
 Bundler.require
 require './lib/parser.rb'
 
-
 class SoundHub < Sinatra::Application
 
   my_parser = Parser.new
@@ -69,4 +68,3 @@ class SoundHub < Sinatra::Application
   end
 
 end
-
