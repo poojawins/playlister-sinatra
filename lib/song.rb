@@ -32,6 +32,10 @@ class Song
     "#{self.artist.name} - #{self.name} [#{self.genre.name}]"
   end
 
+  def name_and_artist
+    "#{self.name} - #{self.artist.name}"
+  end
+
   def genre=(genre)
     @genre = genre
     genre.songs << self

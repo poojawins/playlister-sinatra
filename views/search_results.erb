@@ -4,7 +4,7 @@
   <% if @results.length > 0 %>
     <% @results.sort_by { |song| song.name }.each do |song| %>
     <p>
-      <a href="/songs/<%= song.name.gsub(" ", "%20") %>"><%= song.name %></a>
+      <a href="/songs/<%= song.name.gsub(" ", "%20") %>"><%= song.name_and_artist %></a>
     </p>
     <% end %>
   <% else %>
